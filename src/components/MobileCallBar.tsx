@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function MobileCallBar() {
@@ -13,14 +13,14 @@ export function MobileCallBar() {
         <Phone size={16} aria-hidden="true" /> Appeler
       </a>
       <a
-        href={practiceConfig.whatsappLink}
+        href={practiceConfig.directionsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="button-whatsapp"
-        aria-label="Contacter le praticien par WhatsApp"
-        data-testid="link-mobile-fixed-whatsapp"
+        className="button-directions"
+        aria-label="Ouvrir l’itinéraire Google Maps vers le cabinet"
+        data-testid="link-mobile-fixed-directions"
       >
-        <MessageCircle size={16} aria-hidden="true" /> WhatsApp
+        <MapPin size={16} aria-hidden="true" /> Itinéraire
       </a>
     </div>
   );

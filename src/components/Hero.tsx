@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowDown, Clock3, MapPin, Navigation, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function Hero() {
@@ -11,20 +11,20 @@ export function Hero() {
           <em>près de chez vous.</em>
         </h1>
         <p className="hero-intro reveal reveal-delay-2">
-          Le cabinet du {practiceConfig.name} vous accueille à {practiceConfig.city}. Retrouvez ici l’essentiel pour nous contacter, poser vos questions et préparer votre visite en toute sérénité.
+          Le cabinet du {practiceConfig.name} vous accueille à {practiceConfig.city}. Retrouvez ici l’essentiel pour nous contacter par téléphone et vous orienter facilement jusqu’au cabinet.
         </p>
         <div className="hero-actions reveal reveal-delay-2">
           <a className="button-primary" href={practiceConfig.phoneLink} data-testid="link-call-hero">
             <Phone size={17} aria-hidden="true" /> Appeler le {practiceConfig.phoneDisplay}
           </a>
           <a
-            className="button-whatsapp"
-            href={practiceConfig.whatsappLink}
+            className="button-directions"
+            href={practiceConfig.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            data-testid="link-whatsapp-hero"
+            data-testid="link-directions-hero"
           >
-            <MessageCircle size={17} aria-hidden="true" /> WhatsApp
+            <Navigation size={17} aria-hidden="true" /> Itinéraire Google Maps
           </a>
           <a className="text-link" href="#infos" data-testid="link-hero-info">
             Informations pratiques <ArrowDown size={15} aria-hidden="true" />
@@ -53,7 +53,13 @@ export function Hero() {
             data-testid="img-dr-khaled-boukari-hero"
           />
         </div>
-        <div className="floating-location float-note">
+        <a
+          href={practiceConfig.directionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="floating-location float-note"
+          aria-label="Ouvrir l’itinéraire Google Maps"
+        >
           <span className="location-icon">
             <MapPin size={17} aria-hidden="true" />
           </span>
@@ -61,7 +67,7 @@ export function Hero() {
             <small>Nous trouver</small>
             <strong>{practiceConfig.city} · {practiceConfig.wilaya}</strong>
           </span>
-        </div>
+        </a>
         <div className="vertical-note" aria-hidden="true">
           CABINET DENTAIRE · ALGÉRIE
         </div>

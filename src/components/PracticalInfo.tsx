@@ -1,4 +1,4 @@
-import { ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, Clock3, MapPin, Navigation, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function PracticalInfo() {
@@ -12,7 +12,7 @@ export function PracticalInfo() {
             <em>essentielles.</em>
           </h2>
           <p>
-            Pour toute demande d’horaires, de prise en charge ou d’orientation, contactez directement le cabinet. L’échange téléphonique ou WhatsApp permet une réponse immédiate.
+            Pour toute demande d’horaires, de prise en charge ou d’orientation, contactez directement le cabinet par téléphone. L’appel vous permet d’échanger sans intermédiaire.
           </p>
         </div>
 
@@ -63,24 +63,6 @@ export function PracticalInfo() {
             </div>
           </div>
 
-          <div className="info-row">
-            <span className="info-icon">
-              <MessageCircle size={20} aria-hidden="true" />
-            </span>
-            <div>
-              <span className="info-label">Messagerie WhatsApp</span>
-              <a
-                className="info-phone"
-                href={practiceConfig.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="link-whatsapp-contact"
-              >
-                Échanger sur WhatsApp <ArrowRight size={16} aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
           <div className="info-buttons-group">
             <a
               href={practiceConfig.phoneLink}
@@ -90,13 +72,13 @@ export function PracticalInfo() {
               <Phone size={16} aria-hidden="true" /> Appeler le {practiceConfig.phoneDisplay}
             </a>
             <a
-              href={practiceConfig.whatsappLink}
+              href={practiceConfig.directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-whatsapp info-button"
-              data-testid="link-whatsapp-contact-button"
+              className="button-directions info-button"
+              data-testid="link-directions-contact-button"
             >
-              <MessageCircle size={16} aria-hidden="true" /> Écrire par WhatsApp
+              <Navigation size={16} aria-hidden="true" /> Lancer l’itinéraire GPS Maps
             </a>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, CalendarDays, MapPin, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function ClosingCTA() {
@@ -14,7 +14,7 @@ export function ClosingCTA() {
           <em>pour commencer.</em>
         </h2>
         <p>
-          Pour connaître les disponibilités d’accueil, poser une question ou préparer votre rendez-vous, contactez directement le cabinet du {practiceConfig.name}.
+          Pour connaître les disponibilités d’accueil, poser une question ou préparer votre venue, contactez directement le cabinet du {practiceConfig.name}.
         </p>
         <div className="closing-actions">
           <a
@@ -25,13 +25,13 @@ export function ClosingCTA() {
             <Phone size={17} aria-hidden="true" /> Appeler le {practiceConfig.phoneDisplay} <ArrowRight size={16} aria-hidden="true" />
           </a>
           <a
-            className="button-whatsapp"
-            href={practiceConfig.whatsappLink}
+            className="button-directions-closing"
+            href={practiceConfig.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            data-testid="link-whatsapp-closing"
+            data-testid="link-directions-closing"
           >
-            <MessageCircle size={17} aria-hidden="true" /> WhatsApp direct
+            <MapPin size={17} aria-hidden="true" /> Itinéraire Google Maps
           </a>
         </div>
       </div>

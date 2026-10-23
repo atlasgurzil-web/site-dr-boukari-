@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, MessageCircle } from 'lucide-react';
+import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function PractitionerSection() {
@@ -27,28 +27,28 @@ export function PractitionerSection() {
             </p>
           ) : (
             <p className="practitioner-bio" data-testid="text-practitioner-introduction">
-              Chirurgien-dentiste exerçant à {practiceConfig.city} (wilaya d’{practiceConfig.wilaya}), le {practiceConfig.name} assure un accueil bienveillant et des soins attentifs pour l’ensemble de vos besoins dentaires. Pour toute information sur les prises en charge ou pour préparer votre visite, le contact direct par téléphone ou WhatsApp est privilégié.
+              Chirurgien-dentiste exerçant à {practiceConfig.city} (wilaya d’{practiceConfig.wilaya}), le {practiceConfig.name} assure un accueil bienveillant et des soins attentifs pour l’ensemble de vos besoins bucco-dentaires. Pour toute information sur les prises en charge ou pour préparer votre visite au cabinet, le contact direct par téléphone est privilégié.
             </p>
           )}
           <div className="practitioner-callout">
             <span className="callout-rule" />
             <p>
               Une écoute attentive, un échange direct.<br />
-              <strong>N’hésitez pas à appeler avant votre venue.</strong>
+              <strong>Appelez le cabinet avant votre venue.</strong>
             </p>
           </div>
           <div className="flex flex-wrap gap-3 items-center">
-            <a href={practiceConfig.phoneLink} className="button-outline" data-testid="link-call-practitioner">
-              <Phone size={16} aria-hidden="true" /> {practiceConfig.phoneDisplay} <ArrowRight size={15} aria-hidden="true" />
+            <a href={practiceConfig.phoneLink} className="button-primary" data-testid="link-call-practitioner">
+              <Phone size={16} aria-hidden="true" /> Appeler le {practiceConfig.phoneDisplay}
             </a>
             <a
-              href={practiceConfig.whatsappLink}
+              href={practiceConfig.directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-whatsapp"
-              data-testid="link-whatsapp-practitioner"
+              className="button-outline"
+              data-testid="link-directions-practitioner"
             >
-              <MessageCircle size={16} aria-hidden="true" /> WhatsApp
+              <MapPin size={16} aria-hidden="true" /> Voir l’itinéraire <ArrowRight size={15} aria-hidden="true" />
             </a>
           </div>
         </div>

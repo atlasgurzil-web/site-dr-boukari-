@@ -4,7 +4,6 @@ export const practiceConfig = {
   phoneDisplay: '06 64 67 61 85',
   phoneRaw: '0664676185',
   phoneLink: 'tel:+213664676185',
-  whatsappLink: 'https://wa.me/213664676185?text=Bonjour%20Dr%20Boukari%2C%20je%20souhaite%20prendre%20un%20renseignement%20au%20cabinet.',
   directionsUrl: 'https://maps.app.goo.gl/UhUWNZKLJWvkJGAU9',
   location: "Besbes, wilaya d'El Tarf, Algérie",
   city: 'Besbes',

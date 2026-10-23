@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Menu, MessageCircle, Phone, X } from 'lucide-react';
+import { ArrowRight, MapPin, Menu, Phone, X } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 const navigation = [
@@ -56,15 +56,15 @@ export function Navbar() {
 
         <div className="header-actions">
           <a
-            href={practiceConfig.whatsappLink}
+            href={practiceConfig.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="header-whatsapp"
-            data-testid="link-whatsapp-header"
-            aria-label="Contacter le cabinet par WhatsApp"
+            className="header-directions"
+            data-testid="link-directions-header"
+            aria-label="Ouvrir l’itinéraire Google Maps vers le cabinet"
           >
-            <MessageCircle size={15} aria-hidden="true" />
-            <span>WhatsApp</span>
+            <MapPin size={15} aria-hidden="true" />
+            <span>Itinéraire</span>
           </a>
           <a href={practiceConfig.phoneLink} className="header-call" data-testid="link-call-header">
             <Phone size={15} aria-hidden="true" />
@@ -106,14 +106,14 @@ export function Navbar() {
             <Phone size={16} aria-hidden="true" /> Appeler le {practiceConfig.phoneDisplay}
           </a>
           <a
-            className="button-whatsapp"
-            href={practiceConfig.whatsappLink}
+            className="button-directions"
+            href={practiceConfig.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
-            data-testid="link-mobile-whatsapp"
+            data-testid="link-mobile-directions"
           >
-            <MessageCircle size={16} aria-hidden="true" /> Échanger par WhatsApp
+            <MapPin size={16} aria-hidden="true" /> Ouvrir l’itinéraire Google Maps
           </a>
         </div>
       </nav>

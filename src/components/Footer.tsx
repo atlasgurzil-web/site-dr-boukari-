@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import { practiceConfig } from '@/config';
 
 export function Footer() {
@@ -24,22 +24,13 @@ export function Footer() {
             <Phone size={15} aria-hidden="true" /> {practiceConfig.phoneDisplay}
           </a>
           <a
-            href={practiceConfig.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-whatsapp"
-            data-testid="link-whatsapp-footer"
-          >
-            <MessageCircle size={15} aria-hidden="true" /> WhatsApp
-          </a>
-          <a
             href={practiceConfig.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-directions"
             data-testid="link-footer-directions"
           >
-            Itinéraire <ArrowRight size={14} aria-hidden="true" />
+            <MapPin size={15} aria-hidden="true" /> Itinéraire Maps <ArrowRight size={14} aria-hidden="true" />
           </a>
         </div>
       </div>
