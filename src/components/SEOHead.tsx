@@ -52,6 +52,12 @@ export function SEOHead() {
       image: practiceConfig.imagePath,
       priceRange: '$$',
       currenciesAccepted: 'DZD',
+      hasMap: practiceConfig.directionsUrl,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 36.704348,
+        longitude: 7.846324,
+      },
       address: {
         '@type': 'PostalAddress',
         addressLocality: practiceConfig.city,
