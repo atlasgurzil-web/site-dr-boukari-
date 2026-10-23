@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Ajouter la directive Sitemap avec l’URL absolue lorsque le domaine officiel sera confirmé.
+Sitemap: https://dr-boukari.atlasforge.space/sitemap.xml

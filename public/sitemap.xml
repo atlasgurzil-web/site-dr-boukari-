@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Domaine officiel non configuré. Ajouter ici l’URL absolue de la page d’accueil avant publication. -->
+  <url>
+    <loc>https://dr-boukari.atlasforge.space/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

@@ -12,6 +12,6 @@ export const practiceConfig = {
   imagePath: '/dr-khaled-boukari.jpg',
   // Keep empty until Dr Boukari's approved biography is available.
   biography: '',
-  // Set to the definitive HTTPS origin after the site has a confirmed domain.
-  canonicalDomain: '',
+  // Official HTTPS domain configured for Coolify deployment
+  canonicalDomain: 'https://dr-boukari.atlasforge.space',
 };
