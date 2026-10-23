@@ -4,6 +4,8 @@ import {
   type ErrorInfo,
   type ReactNode,
 } from 'react';
+import { Phone, RefreshCw, AlertCircle } from 'lucide-react';
+import { practiceConfig } from '@/config';
 
 export interface ErrorFallbackProps {
   error: Error;
@@ -37,28 +39,39 @@ function toError(value: unknown): Error {
 
 function DefaultFallback({ error, resetError }: ErrorFallbackProps) {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50 p-6">
-      <div className="max-w-lg w-full text-center">
-        <h1 className="text-xl font-semibold text-gray-900">
-          Something went wrong
+    <div className="min-h-screen w-full flex items-center justify-center bg-[#f7f4ec] p-6 text-[#203b38]">
+      <div className="max-w-md w-full text-center bg-[#fbfaf6] p-8 rounded-2xl border border-[#dfddd3] shadow-lg">
+        <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#dfe9df] text-[#1f5a50] flex items-center justify-center">
+          <AlertCircle size={28} />
+        </div>
+        <h1 className="text-2xl font-serif font-medium text-[#163f39] mb-2">
+          Difficulté d’affichage
         </h1>
-        <p className="mt-2 text-sm text-gray-600">
-          This part of the app hit an error. The rest of the app is still
-          running.
+        <p className="text-sm text-[#4a5751] leading-relaxed mb-6">
+          Une difficulté inattendue est survenue lors de l’affichage de cette page. Vous pouvez recharger la page ou contacter directement le cabinet.
         </p>
-        {/* Dev only: messages can carry API responses and other internals. */}
+        
         {import.meta.env.DEV ? (
-          <pre className="mt-4 overflow-x-auto rounded bg-gray-100 p-3 text-left text-xs text-gray-800">
+          <pre className="mb-6 overflow-x-auto rounded bg-[#edf0e8] p-3 text-left text-xs text-[#203b38]">
             {error.message || String(error)}
           </pre>
         ) : null}
-        <button
-          type="button"
-          onClick={resetError}
-          className="mt-4 rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700"
-        >
-          Try again
-        </button>
+
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            type="button"
+            onClick={resetError}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1f5a50] px-5 py-3 text-sm font-semibold text-white hover:bg-[#163f39] transition-colors"
+          >
+            <RefreshCw size={16} /> Recharger la page
+          </button>
+          <a
+            href={practiceConfig.phoneLink}
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1f5a50] px-5 py-3 text-sm font-semibold text-[#1f5a50] hover:bg-[#dfe9df] transition-colors"
+          >
+            <Phone size={16} /> Appeler le cabinet
+          </a>
+        </div>
       </div>
     </div>
   );
